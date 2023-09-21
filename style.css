@@ -35,17 +35,18 @@ main {
 
 /* row */
 .row {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 section {
   max-width: 440px;
   margin-top: 25px;
-  text-align: center;
-  justify-self: center;
+  align-self: center;
 }
 h2 {
   font-size: 26px;
-  font-family: poppins;
+  font-family: Poppins, sans-serif;
 }
 p {
   margin-top: 25px;
@@ -58,8 +59,9 @@ button {
   margin-top: 25px;
   border-radius: 20px;
   color: var(--violet);
-  box-shadow: 3px 3px 5px var(--soft-magenta);
+  box-shadow: 0 0 10px rgba(120, 120, 120, 1), 3px 3px 5px var(--soft-magenta);
   border: none;
+  font-size: 18px;
 
   &:hover {
     cursor: pointer;
@@ -102,10 +104,49 @@ footer a {
   color: var(--soft-magenta);
 }
 
-/* style for medium devices */
-@media screen and (width > 500px) {
-}
-
 /* style for desktop/larger screens */
-@media screen and (width > 1110px) {
+@media screen and (width > 1150px) {
+  body {
+    background-image: url("images/bg-desktop.svg");
+  }
+  header {
+    margin: 60px 78px 0;
+  }
+  header > img {
+    height: 42px;
+  }
+
+  /* main section */
+  main {
+    margin: 50px 80px 0;
+    max-width: 1280px;
+  }
+  .row {
+    flex-direction: row;
+    column-gap: 56px;
+  }
+  .row > img {
+    max-width: 696px;
+  }
+  section {
+    max-width: 524px;
+    text-align: left;
+  }
+  h2 {
+    margin-top: 25px;
+    font-size: 40px;
+  }
+  p {
+    size: 22px;
+  }
+  button {
+    width: 200px;
+    height: 56px;
+    border-radius: 28px;
+  }
+  /* social links section */
+  .social-links {
+    margin-top: 25px;
+    text-align: right;
+  }
 }
