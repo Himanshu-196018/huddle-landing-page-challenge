@@ -9,18 +9,23 @@
 }
 
 body {
-  min-height: 100vh;
   color: white;
-  background: var(--violet) url("images/bg-mobile.svg") no-repeat top center;
-  background-size: contain;
+  background-color: var(--violet);
   font-family: Open-Sans, sans-serif;
+  display: grid;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1280px;
+  min-height: 100vh;
+  background: url("images/bg-mobile.svg") no-repeat top;
+  background-size: contain;
 }
 
 /* style for header Section */
-header {
-  margin: 40px;
-}
 header > img {
+  margin: 40px;
   height: 34px;
 }
 h1 {
@@ -41,10 +46,10 @@ main {
 }
 section {
   max-width: 440px;
-  margin-top: 25px;
   align-self: center;
 }
 h2 {
+  margin-top: 25px;
   font-size: 26px;
   font-family: Poppins, sans-serif;
 }
@@ -106,21 +111,15 @@ footer a {
 
 /* style for desktop/larger screens */
 @media screen and (width > 1150px) {
-  body {
+  .container {
     background-image: url("images/bg-desktop.svg");
   }
-  header {
-    margin: 60px 78px 0;
-  }
   header > img {
+    margin-top: 60px;
     height: 42px;
   }
 
   /* main section */
-  main {
-    margin: 50px 80px 0;
-    max-width: 1280px;
-  }
   .row {
     flex-direction: row;
     column-gap: 56px;
@@ -131,19 +130,18 @@ footer a {
   section {
     max-width: 524px;
     text-align: left;
+    align-self: flex-start;
   }
   h2 {
     margin-top: 25px;
     font-size: 40px;
-  }
-  p {
-    size: 22px;
   }
   button {
     width: 200px;
     height: 56px;
     border-radius: 28px;
   }
+
   /* social links section */
   .social-links {
     margin-top: 25px;
