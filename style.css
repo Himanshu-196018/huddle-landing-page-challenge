@@ -9,7 +9,103 @@
 }
 
 body {
+  min-height: 100vh;
+  color: white;
+  background: var(--violet) url("images/bg-mobile.svg") no-repeat top center;
+  background-size: contain;
   font-family: Open-Sans, sans-serif;
 }
 
-/* add  poppins family for heading*/
+/* style for header Section */
+header {
+  margin: 40px;
+}
+header > img {
+  height: 34px;
+}
+h1 {
+  display: none;
+}
+
+/* style for main section of the body */
+main {
+  min-width: 295px;
+  margin: 70px 40px 0;
+}
+
+/* row */
+.row {
+  display: grid;
+}
+section {
+  max-width: 440px;
+  margin-top: 25px;
+  text-align: center;
+  justify-self: center;
+}
+h2 {
+  font-size: 26px;
+  font-family: poppins;
+}
+p {
+  margin-top: 25px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.7);
+}
+button {
+  width: 200px;
+  height: 40px;
+  margin-top: 25px;
+  border-radius: 20px;
+  color: var(--violet);
+  box-shadow: 3px 3px 5px var(--soft-magenta);
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--soft-magenta);
+    color: white;
+    box-shadow: 3px 3px 5px rgba(80, 80, 80, 0.6);
+    transform: scale(1.1) translatey(5px);
+    transition: all 0.25s ease-out;
+  }
+}
+
+/* style for main's link section */
+.social-links {
+  width: 100%;
+  margin-top: 65px;
+  text-align: center;
+}
+.fa-brands {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--soft-magenta);
+    border-color: var(--soft-magenta);
+  }
+}
+
+/* style for footer of the page */
+footer {
+  font-size: 14px;
+  text-align: center;
+  margin: 0 15px;
+}
+footer a {
+  color: var(--soft-magenta);
+}
+
+/* style for medium devices */
+@media screen and (width > 500px) {
+}
+
+/* style for desktop/larger screens */
+@media screen and (width > 1110px) {
+}
